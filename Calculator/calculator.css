@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: Poppins;
+}
+body{
+    background-color: lightblue;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+    background:transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0px;
+}
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow:none ;
+}
+form input.equal{
+    background-color: darkorange;
+}
+form input.zero{
+    padding-left: 71.5px;
+    padding-right: 71.5px;
+    background-color: rgb(65, 65, 65);
+}
+form input.dot{
+    background-color: rgb(65, 65, 65);
+}
+form input.operator{
+    background-color: darkgray;
+}
+form input.arithmetic{
+    background-color: darkorange;
+}
+form input.numbers{
+    background-color: rgb(65, 65, 65);
+}

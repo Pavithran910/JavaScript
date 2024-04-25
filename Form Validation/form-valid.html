@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="form-valid.css">
+</head>
+<body>
+    <div class="container">
+
+    
+    <div class="display">
+        <h2>Sign up your ACC</h2>
+        <input type="text" id = "username" placeholder="Enter your username">
+        <input type="password" id = "password" placeholder="Enter your Password">
+        <input type="password" id ="confirm" placeholder="Re-enter your Password">
+        <button onclick="get()">Sign in</button>
+        <div id = "resultData"></div>
+    </div>
+
+    <script>           
+            var res=document.getElementById("resultData")
+     
+            function get(){
+                var user=document.getElementById("username").value
+                var pass =document.getElementById("password").value
+                var confirm =document.getElementById("confirm").value
+                if(user.length==0 && pass.length==0){
+                    res.innerHTML="Enter Username and Password!!"
+                    res.style.color = "red";
+                    res.style.fontWeight="bold"
+                    res.style.fontFamily="Poppins"
+                }
+                else if(user.length==0){
+                    res.innerHTML="Username should not be empty."
+                    res.style.fontFamily="Poppins"
+                    res.style.fontWeight="bold"
+                }
+                else if(pass.length==0){
+                    res.innerHTML="Password should not be empty."
+                    res.style.fontFamily="Poppins"
+                    res.style.fontWeight="bold"
+                }
+                else if(confirm.length==0){
+                    res.innerHTML="Re-enter your Password!!."
+                    res.style.fontFamily="Poppins"
+                    res.style.fontWeight="bold"
+                }
+                
+                else if(user.length<4){
+                    res.innerHTML="Username must be 4 characters or above."
+                    res.style.fontFamily="Poppins"
+                    res.style.fontWeight="bold"
+                }
+
+                else if(pass.length<6 || pass.length>12){
+                    res.innerHTML="Password length should be 6 to 12 characters."
+                    res.style.fontFamily="Poppins"
+                    res.style.fontWeight="bold"
+                }
+                else if(pass==confirm){
+                    res.innerHTML="Signed Up Successfully!!"
+                    res.style.fontFamily="Poppins"
+                    res.style.color="Green"
+                    res.style.fontWeight="bold"
+                }else{
+                    res.innerHTML="Enter your confirmed password correctly!!"
+                    res.style.fontFamily="Poppins"
+                    res.style.color = "red"
+                    res.style.fontWeight="bold"
+                }
+                
+            }
+    </script>
+</div>
+</body>
+</html>
