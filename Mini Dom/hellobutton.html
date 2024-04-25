@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello-button</title>
+</head>
+<body>
+    <div class="display">
+      <input type="button" value="Add Hello" onclick="displayValue()">
+      <h1 id="hello"> </h1>
+    </div>
+    <script>
+        function displayValue(){
+        var res= document.getElementById("hello")
+        res.innerHTML+="Hello"+"<br>"
+        }
+      
+    </script>
+</body>
+</html>

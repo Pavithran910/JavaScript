@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Changing_Button</title>
+</head>
+<body>
+    <input type="button" id="input" value="Change color" onclick="colors()">
+    <script>
+        function colors(){
+            var res=document.getElementsByTagName("input")[0];
+            res.style.backgroundColor="black";
+            res.style.color="cyan";
+        }
+    </script>
+</body>
+</html>
