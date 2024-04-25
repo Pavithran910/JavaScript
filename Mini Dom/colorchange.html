@@ -6,12 +6,17 @@
     <title>Color-Changing_Button</title>
 </head>
 <body>
+    <style>
+        .cyan{
+          background-color: black;
+          color: cyan;
+        }
+    </style>
     <input type="button" id="input" value="Change color" onclick="colors()">
     <script>
         function colors(){
-            var res=document.getElementsByTagName("input")[0];
-            res.style.backgroundColor="black";
-            res.style.color="cyan";
+            var res=document.getElementsByTagName("input")[0].classList.toggle("cyan");
+           
         }
     </script>
 </body>
