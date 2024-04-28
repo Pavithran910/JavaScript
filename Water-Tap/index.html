@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water-Tap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        .pipewater{
+        width: 12px;
+        height: 190px;
+        background-color: lightskyblue;
+        position: absolute;
+        top: 65px;
+        left: 1.8px;
+        display: none;
+    }
+    
+    .changer{
+        background-color: red;
+    }
+    </style>
+    <div class="container">
+        <div class="tank">
+            <div class="tank-water" id="tankwater"></div>
+        </div>
+        <div class="pipe">
+            <div class="pipebg"> </div>
+            <div class="tap">
+                <button onclick="flow()" id="button" class="changer"></button>
+                <div class="pipewater" id="pipewater">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
