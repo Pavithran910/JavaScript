@@ -1,0 +1,7 @@
+Password and username should not same
+Username should contain atleast 4 characters 
+Password should contain minimum 6 and maximum 16 characters 
+Password should contain atleast 1 uppercase
+Password should contain atleast 1 lowercase
+Password should contain atleast 1 number
+Password should contain atleast 1 special characters
