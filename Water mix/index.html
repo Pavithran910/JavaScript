@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Mix</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-top: 200px;
+        }
+        .tank1,.tank2, .tank3{
+            width: 50px;
+            height: 65px;
+            border: 2px solid;
+            margin-top: 2px;
+            rotate: 180deg;
+        }
+        .container1 img, .container1 img, .container1 img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            margin-top: -18px;
+            margin-left: 53.5px;
+        }
+        .water1,.water2,.water3{
+            background-color: lightskyblue;
+            width: 50px;
+            height: 65px;           
+            
+        }
+        .pipewater1,.pipewater2,.pipewater3{
+            width: 7px;
+            height: 130px;
+            position: absolute;
+            border-radius: 10px;
+            margin-top: 7.9px;
+            margin-left: 75.5px;
+            background-color: lightskyblue;
+            display: none;
+        }
+    
+        .StorageTank{
+            width: 390px;
+            height: 120px;
+            border: 2px solid;
+            border-bottom   : none;
+            margin-left: 470px;
+            margin-top: 20px;
+            rotate: 180deg;
+        }
+        .storedWater{
+            background-color: lightskyblue;
+            
+        }
+    </style>
+    <div class="container1">
+        <div class="watertank1">
+            <div class="tank1">
+                <div class="water1"> </div>
+            </div>
+            <img src="./faucet.svg" alt="">
+            <div class="pipewater1"> </div>
+        </div>
+
+        <div class="watertank2">
+            <div class="tank2">
+                <div class="water2"> </div>
+            </div>
+            <img src="./faucet.svg" alt="">
+            <div class="pipewater2"> </div>
+        </div>
+
+        <div class="watertank3">
+            <div class="tank3">
+                <div class="water3"> </div>
+            </div>
+            <img src="./faucet.svg" alt="">
+            <div class="pipewater3"> </div>
+        </div>
+    </div>
+        <div class="StorageTank">
+            <div class="storedWater">
+
+            </div>
+        </div>
+
+    <script>
+        var pipe1 = document.querySelector('.watertank1 img');
+        var pipe2 = document.querySelector('.watertank2 img');
+        var pipe3 = document.querySelector('.watertank3 img');
+    
+        var pip1 = document.querySelector('.pipewater1');
+        var pip2 = document.querySelector('.pipewater2');
+        var pip3 = document.querySelector('.pipewater3');
+    
+        var interval1;
+        var interval2;
+        var interval3;
+    
+        var flow1 = false;
+        var flow2 = false;
+        var flow3 = false;
+    
+        var tankWater1 = document.querySelector('.water1');
+        var tankWater2 = document.querySelector('.water2');
+        var tankWater3 = document.querySelector('.water3');
+    
+        var containerHeight = document.querySelector('.storedWater');
+        var tankHeight = 0;
+    
+        
+        pipe1.addEventListener("click", function() {
+            if (pip1.style.display === "block") {
+                pip1.style.display = "none";
+            } else {
+                pip1.style.display = "block";
+            }
+    
+            if (!flow1) {
+                flow1 = true;
+                var currentHeight = parseFloat(getComputedStyle(tankWater1).height);
+                interval1 = setInterval(function() {
+                    currentHeight -= 1;
+                    tankWater1.style.height = currentHeight + "px";
+                    tankHeight += 0.2;
+                    containerHeight.style.height = tankHeight + "px";
+                    if (currentHeight < 0) {
+                        clearInterval(interval1);
+                        tankWater1.style.display = "none";
+                        pip1.style.display = "none";
+                        flow1 = false;
+                    }
+                }, 20);
+
+            } else {
+                clearInterval(interval1);
+                flow1 = false;
+            }
+    
+        });
+    
+
+        pipe2.addEventListener("click", function() {
+            if (pip2.style.display === "block") {
+                pip2.style.display = "none";
+            } else {
+                pip2.style.display = "block";
+            }
+            if (!flow2) {
+                flow2 = true;
+                var currentHeight = parseFloat(getComputedStyle(tankWater2).height);
+                interval2 = setInterval(function() {
+                    currentHeight -= 1;
+                    tankWater2.style.height = currentHeight + "px";
+                    tankHeight += 0.2;
+                    containerHeight.style.height = tankHeight + "px";
+                    if (currentHeight < 0) {
+                        clearInterval(interval2);
+                        tankWater2.style.display = "none";
+                        pip2.style.display = "none";
+                        flow2 = false;
+                    }
+                }, 20);
+            } else {
+                clearInterval(interval2);
+                flow2 = false;
+            }
+    
+        });
+    
+        pipe3.addEventListener("click", function() {
+            if (pip3.style.display === "block") {
+                pip3.style.display = "none";
+            } else {
+                pip3.style.display = "block";
+            }
+            if (!flow3) {
+                flow3 = true;
+                var currentHeight = parseFloat(getComputedStyle(tankWater3).height);
+                interval3 = setInterval(function() {
+                    currentHeight -= 1;
+                    tankWater3.style.height = currentHeight + "px";
+                    tankHeight += 0.2;
+                    containerHeight.style.height = tankHeight + "px";
+                    if (currentHeight < 0) {
+                        clearInterval(interval3);
+                        tankWater3.style.display = "none";
+                        pip3.style.display = "none";
+                        flow3 = false;
+                    }
+                }, 20);
+            } else {
+                clearInterval(interval3);
+                flow3 = false;
+            }
+    
+        });
+    </script>
+    </body>
+</html>
