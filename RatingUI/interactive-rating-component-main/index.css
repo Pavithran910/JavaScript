@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(216, 12%, 8%);
+    font-family: sans-serif
+}
+.content{
+    background-color: hsl(216, 12%, 54%);
+    width: 27%;
+    height: 50%;
+    border-radius: 40px;
+    padding: 40px;
+    margin-left: 35%;
+    margin-top: 13%;
+}
+.content h2{
+    margin-bottom: 10px;
+    color: white;
+}
+.content p{
+    color:  lightgrey;
+    font-weight: 400px;
+}
+.star{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(216, 12%, 8%);
+}
+.rates {
+   display: flex;
+   gap: 30px;
+}
+.rates p{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: hsl(213, 19%, 18%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 550px;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transform: background-color 0.3s, color 0.3s;
+}
+.rates p:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+.content a{
+    text-decoration: none;
+}
+.content a p{
+    width: 350px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: 500px;
+    background-color:hsl(25, 97%, 53%);
+    transform: background-color 0.3, color 0.3s;
+}
+.content a p:hover{
+    background-color: white;
+    color: hsl(25, 97%, 53%);;
+}
+.one,.two,.three,.four,.five{
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+.selected {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}

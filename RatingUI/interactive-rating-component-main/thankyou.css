@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(216, 12%, 8%);
+    font-family: sans-serif
+}
+.content{
+    background-color: hsl(216, 12%, 54%);
+    width: 27%;
+    height: 50%;
+    border-radius: 40px;
+    padding: 40px;
+    margin-left: 35%;
+    margin-top: 13%;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rating{
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(213, 19%, 18%);
+    height: 20px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 30px;
+    margin-left: 22%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thanks{
+   text-align: center;
+   font-weight: 500px;
+}
+.thanks h2{
+    color: white;
+    margin-bottom: 10px;
+}
+.thanks p{
+    color: lightgray;
+}
