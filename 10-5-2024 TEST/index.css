@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Poppins;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+.rectangle{
+    background-color:white ;
+    width: 450px;
+    height: 120px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 3px 4px darkgray;
+}
+.rectangle input{
+    width: 350px;
+    margin-top: 10px;
+    height: 25px;
+}
+.rectangle input:placeholder-shown{
+    padding-left: 10px;
+}
+.rectangle button{
+    position: absolute;
+    top: 73px;
+    left: 380px;
+    background-color: transparent;
+    border: none;
+}
+.span{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.span span-one{
+    background-color: red;
+    border-radius: 10px;
+    height: 4px;
+    width: 110px;
+    margin-left: 48px;
+    display: none;
+}
+.span span-two{
+    background-color: orange;
+    border-radius: 10px;
+    height: 4px;
+    width: 110px;
+    display: none;
+}
+.span span-three{
+    background-color: green;
+    border-radius: 10px;
+    height: 4px;
+    width: 110px;
+    display: none;
+}
