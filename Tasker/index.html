@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="left-right">
+            <div class="left">
+                <img src="./to-do.png" alt="">
+            </div>
+                <div class="rightcontent">
+                    <h2>Welcome to Tasker</h2>
+                    <p>Please, insert your informations to access your tasks.</p>
+                     <div class="mailpw">
+                        <label><b>Email</b></label>
+                        <input type="email" placeholder="Insert your email" id="email">
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Insert your password" id="password">
+                         <div class="remember">   
+                            <input type="checkbox">
+                            <p>Remember me</p>
+                         </div>        
+                        <button onclick="signInClick()" id="signin">Sign in</button>
+                        <p1>Don't have an account? <a href=""> <b>Sign Up</b></a></p1>
+                        <div id="indication" class="indication"> </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="script.js"> </script>
+</body>
+</html>
